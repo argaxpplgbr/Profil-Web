@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arga, Kelas X PPLG | SMK Prakarya Internasional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Figtree:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add("js");</script>
+</head>
+<body>
+
+<canvas id="bg" aria-hidden="true"></canvas>
+<div class="progress" aria-hidden="true"></div>
+
+<header id="home">
+  <div class="wrap titlebar">
+    <div class="brand">
+      <div class="logo">SPI<img src="images/logo.png" alt="Logo SMK Prakarya Internasional" onerror="this.remove()"></div>
+      <p class="sekolah">SMK Prakarya Internasional</p>
+    </div>
+    <button id="tema" class="tema" type="button" aria-pressed="false">Mode terang</button>
+  </div>
+
+  <div class="wrap hero">
+    <div class="hero-text">
+      <div class="tiles" aria-label="PPLG"><span>P</span><span>P</span><span>L</span><span>G</span></div>
+      <h1>Profil Jurusan PPLG</h1>
+      <p class="jurusan">Pengembangan Perangkat Lunak dan Gim</p>
+      <p class="identitas"><b>Arga</b><span>Kelas X PPLG</span></p>
+      <p class="ketik">Di sini saya belajar membuat <strong id="ketik"></strong><span class="kursor" aria-hidden="true"></span></p>
+      <div class="cta">
+        <a class="btn btn-utama" href="#kompetensi">Lihat kompetensi</a>
+        <a class="btn btn-garis" href="#api">Coba API</a>
+      </div>
+    </div>
+
+    <div class="ide-wrap">
+      <div class="ide" role="group" aria-label="Contoh kode C# tentang Arga">
+        <div class="ide-bar">
+          <i></i><i></i><i></i>
+          <div class="tabs" role="tablist">
+            <button class="tab aktif" type="button" role="tab" aria-selected="true" data-berkas="Siswa.cs">Siswa.cs</button>
+            <button class="tab" type="button" role="tab" aria-selected="false" data-berkas="PPLG.cs">PPLG.cs</button>
+          </div>
+        </div>
+        <div class="editor">
+          <pre class="gutter" id="gutter" aria-hidden="true"></pre>
+          <pre class="kode"><code id="kode"></code></pre>
+        </div>
+        <div class="status">
+          <button id="run" class="run" type="button">&#9654; Run</button>
+          <span>Klik Run untuk menjalankan</span>
+        </div>
+        <div class="konsol" id="konsol" aria-live="polite"></div>
+      </div>
+      <span class="chip c1" aria-hidden="true">Web</span>
+      <span class="chip c2" aria-hidden="true">Gim</span>
+      <span class="chip c3" aria-hidden="true">Aplikasi</span>
+    </div>
+  </div>
+</header>
+
+<section class="marquee" aria-label="Teknologi yang dipelajari">
+  <div class="track">
+    <span>C#</span><span>ASP.NET</span><span>Swagger</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>SQL</span><span>Python</span><span>Game Dev</span>
+    <span aria-hidden="true">C#</span><span aria-hidden="true">ASP.NET</span><span aria-hidden="true">Swagger</span><span aria-hidden="true">HTML</span><span aria-hidden="true">CSS</span><span aria-hidden="true">JavaScript</span><span aria-hidden="true">SQL</span><span aria-hidden="true">Python</span><span aria-hidden="true">Game Dev</span>
+  </div>
+</section>
+
+<nav aria-label="Navigasi utama">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#profil">Profil</a></li>
+    <li><a href="#kompetensi">Kompetensi</a></li>
+    <li><a href="#api">ASP.NET API</a></li>
+    <li><a href="#kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<div class="layout">
+  <main>
+    <section id="profil" class="reveal">
+      <h2>Apa itu PPLG?</h2>
+      <p>PPLG adalah singkatan dari Pengembangan Perangkat Lunak dan Gim. Di jurusan ini kami belajar membuat program, mulai dari aplikasi desktop, website, sampai gim, dan memahami cara kerja di balik layar sebuah perangkat lunak.</p>
+      <p>Jurusan ini adalah pengembangan dari RPL dengan tambahan materi pembuatan gim.</p>
+      <ul class="stats">
+        <li><b data-count="3">0</b><span>tahun belajar</span></li>
+        <li><b data-count="6">0</b><span>kompetensi utama</span></li>
+        <li><b data-count="6">0</b><span>pilihan profesi</span></li>
+      </ul>
+    </section>
+
+    <section id="kompetensi">
+      <h2 class="reveal">Kompetensi yang dipelajari</h2>
+      <p class="reveal">Pilih kategori, lalu klik kartu untuk melihat penjelasannya.</p>
+
+      <div class="filter reveal" role="group" aria-label="Filter kompetensi">
+        <button type="button" data-kat="semua" aria-pressed="true">Semua</button>
+        <button type="button" data-kat="dasar" aria-pressed="false">Dasar</button>
+        <button type="button" data-kat="web" aria-pressed="false">Web</button>
+        <button type="button" data-kat="data" aria-pressed="false">Data</button>
+        <button type="button" data-kat="aplikasi" aria-pressed="false">Aplikasi</button>
+        <button type="button" data-kat="gim" aria-pressed="false">Gim</button>
+      </div>
+
+      <ul class="skills">
+        <li class="reveal" data-kat="dasar">
+          <button class="kartu" type="button" aria-expanded="false"><strong>Pemrograman dasar</strong><span>Logika, variabel, percabangan, dan perulangan.</span></button>
+          <p class="detail" hidden>Fondasi semua bahasa pemrograman. Kalau logikanya kuat, bahasa apa pun lebih cepat dipelajari.</p>
+        </li>
+        <li class="reveal" data-kat="dasar">
+          <button class="kartu" type="button" aria-expanded="false"><strong>Pemrograman berorientasi objek</strong><span>Menyusun program dengan class dan object.</span></button>
+          <p class="detail" hidden>Program dibagi menjadi objek yang punya data dan perilaku, seperti class Siswa di jendela kode di atas.</p>
+        </li>
+        <li class="reveal" data-kat="data">
+          <button class="kartu" type="button" aria-expanded="false"><strong>Basis data</strong><span>Menyimpan dan mengolah data dengan SQL.</span></button>
+          <p class="detail" hidden>Belajar merancang tabel dan mengambil data dengan query, supaya aplikasi bisa menyimpan informasi.</p>
+        </li>
+        <li class="reveal" data-kat="web">
+          <button class="kartu" type="button" aria-expanded="false"><strong>Pemrograman web</strong><span>HTML, CSS, dan JavaScript untuk membuat website.</span></button>
+          <p class="detail" hidden>HTML untuk struktur, CSS untuk tampilan, JavaScript untuk interaksi. Halaman ini dibuat dengan ketiganya.</p>
+        </li>
+        <li class="reveal" data-kat="aplikasi">
+          <button class="kartu" type="button" aria-expanded="false"><strong>Aplikasi desktop dan mobile</strong><span>Membuat aplikasi yang dipakai di komputer dan ponsel.</span></button>
+          <p class="detail" hidden>Membuat aplikasi berjendela di komputer, misalnya dengan C# dan WinForms, lalu berlanjut ke aplikasi ponsel.</p>
+        </li>
+        <li class="reveal" data-kat="gim">
+          <button class="kartu" type="button" aria-expanded="false"><strong>Pengembangan gim</strong><span>Membuat gim sederhana lengkap dengan aturan mainnya.</span></button>
+          <p class="detail" hidden>Belajar aturan main, karakter, skor, dan gerakan. Ini yang membedakan PPLG dari RPL.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="api">
+      <h2 class="reveal">ASP.NET Core Web API dengan Swagger</h2>
+      <p class="reveal">ASP.NET Core adalah framework C# dari Microsoft untuk membuat backend. Lewat Web API, website atau aplikasi ponsel bisa meminta dan mengirim data ke server. Swagger membuat dokumentasi interaktif otomatis, jadi setiap endpoint bisa dicoba langsung di browser.</p>
+
+      <dl class="metode reveal">
+        <div><dt class="met m-get">GET</dt><dd>ambil data</dd></div>
+        <div><dt class="met m-post">POST</dt><dd>tambah data</dd></div>
+        <div><dt class="met m-put">PUT</dt><dd>ubah data</dd></div>
+        <div><dt class="met m-delete">DELETE</dt><dd>hapus data</dd></div>
+      </dl>
+
+      <ol class="alur reveal" id="alur" aria-label="Alur sebuah request API">
+        <li><b>Client</b><span>Browser atau aplikasi</span></li>
+        <li><b>Controller</b><span>Menerima request</span></li>
+        <li><b>Data</b><span>List atau database</span></li>
+        <li><b>Response</b><span>JSON dan status code</span></li>
+      </ol>
+
+      <div class="swagger reveal">
+        <div class="sw-head">
+          <strong>API Siswa PPLG</strong>
+          <span class="sw-v">v1</span>
+          <code>https://localhost:7000</code>
+        </div>
+        <div class="sw-body">
+          <h3 class="sw-judul">Siswa</h3>
+          <div id="swagger"></div>
+        </div>
+      </div>
+      <p class="catatan">Ini simulasi Swagger UI. Data disimpan di memori browser, sama seperti <code>List</code> di controller. Coba POST dulu, lalu GET semua.</p>
+
+      <h3 class="sub">Kode di baliknya</h3>
+      <div class="blok reveal">
+        <div class="ide">
+          <div class="ide-bar">
+            <i></i><i></i><i></i>
+            <div class="tabs" role="tablist">
+              <button class="ktab aktif" type="button" role="tab" aria-selected="true" data-k="Program.cs">Program.cs</button>
+              <button class="ktab" type="button" role="tab" aria-selected="false" data-k="SiswaController.cs">SiswaController.cs</button>
+            </div>
+          </div>
+          <div class="editor"><pre class="kode"><code id="kode-api"></code></pre></div>
+          <div class="status">
+            <button id="salin-kode" class="run" type="button">Salin kode</button>
+            <span id="ket-kode"></span>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="sub">Coba di komputermu</h3>
+      <ol class="langkah reveal">
+        <li><span><code>dotnet new webapi -n ApiSiswa --use-controllers</code></span></li>
+        <li><span><code>cd ApiSiswa</code></span></li>
+        <li><span><code>dotnet add package Swashbuckle.AspNetCore</code> (kalau proyekmu belum punya Swagger)</span></li>
+        <li><span>Ganti isi <code>Program.cs</code> dan tambahkan <code>SiswaController.cs</code> di folder <code>Controllers</code>.</span></li>
+        <li><span><code>dotnet run</code>, lalu buka <code>https://localhost:PORT/swagger</code>. Nomor PORT muncul di terminal.</span></li>
+      </ol>
+    </section>
+
+    <section id="prospek" class="reveal">
+      <h2>Prospek kerja</h2>
+      <p>Lulusan PPLG bisa bekerja di perusahaan teknologi, jadi freelancer, membuka usaha sendiri, atau lanjut kuliah di bidang informatika. Klik profesi untuk tahu tugasnya.</p>
+      <ul class="jobs">
+        <li><button type="button" aria-pressed="false">Software developer</button></li>
+        <li><button type="button" aria-pressed="false">Web developer</button></li>
+        <li><button type="button" aria-pressed="false">Mobile app developer</button></li>
+        <li><button type="button" aria-pressed="false">Game developer</button></li>
+        <li><button type="button" aria-pressed="false">QA tester</button></li>
+        <li><button type="button" aria-pressed="false">UI designer</button></li>
+      </ul>
+      <p class="info-prospek" id="info-prospek" aria-live="polite">Pilih salah satu profesi di atas.</p>
+    </section>
+
+    <section id="tes" class="reveal">
+      <h2>Cocok di PPLG?</h2>
+      <p>Jawab empat pertanyaan singkat, jujur saja.</p>
+      <div class="kuis" id="kuis"></div>
+    </section>
+
+    <article class="reveal">
+      <h2>Sehari di kelas PPLG</h2>
+      <p class="byline">Ditulis oleh Arga, Kelas X PPLG</p>
+      <p>Pelajaran di kelas kami hampir selalu diakhiri dengan praktik. Kami menulis kode, menjalankannya, lalu memperbaiki error yang muncul. Awalnya membuat frustrasi, tapi rasanya puas sekali ketika program akhirnya berjalan.</p>
+      <p>Selain praktik di komputer, kami mengerjakan proyek kelompok, mengikuti lomba, dan saling bertukar ilmu. Dari sini saya belajar bahwa menjadi programmer berarti terus mencoba dan tidak takut salah.</p>
+    </article>
+  </main>
+
+  <aside class="reveal">
+    <h2>Informasi tambahan</h2>
+    <dl>
+      <dt>Lama belajar</dt>
+      <dd>3 tahun (kelas X sampai XII).</dd>
+      <dt>Alat yang dipakai</dt>
+      <dd>Visual Studio, Visual Studio Code, dan browser.</dd>
+      <dt>Cocok untuk</dt>
+      <dd>Yang suka logika, memecahkan masalah, dan main gim.</dd>
+    </dl>
+    <div class="fakta">
+      <h3>Fakta acak</h3>
+      <p id="fakta" aria-live="polite"></p>
+      <button id="fakta-lagi" type="button">Fakta lain</button>
+    </div>
+  </aside>
+</div>
+
+<footer id="kontak">
+  <div class="wrap">
+    <div class="brand">
+      <div class="logo">SPI<img src="images/logo.png" alt="Logo SMK Prakarya Internasional" onerror="this.remove()"></div>
+      <p class="sekolah">SMK Prakarya Internasional</p>
+    </div>
+    <div>
+      <h2>Kontak</h2>
+      <address>
+        Arga, Kelas X PPLG<br>
+        Email: <span id="email">arga@email.com</span>
+      </address>
+      <button id="salin" class="salin" type="button">Salin email</button>
+      <span id="salin-info" class="salin-info" aria-live="polite"></span>
+    </div>
+    <small>&copy; 2026 Website Profil Siswa</small>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
